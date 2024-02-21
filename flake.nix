@@ -16,14 +16,14 @@
         system = "x86_64-linux";
 	specialArgs = { inherit inputs; };
 	modules = [
-          ./configuration.nix
+          ./hosts/hydrogen
           
 	  home-manager.nixosModules.home-manager
 	  {
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
-	    home-manager.users.davide = import ./home.nix;
-	    home-manager.users.host = import ./host-home.nix;
+	    home-manager.users.davide = import ./hosts/hydrogen/davide-home.nix;
+	    home-manager.users.host = import ./hosts/hydrogen/host-home.nix;
 	  }	
 	];
       };
