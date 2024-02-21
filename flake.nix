@@ -22,8 +22,8 @@
 	  {
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
-	    home-manager.users.davide = import ./hosts/hydrogen/davide-home.nix;
-	    home-manager.users.host = import ./hosts/hydrogen/host-home.nix;
+	    home-manager.users.davide = import ./hosts/hydrogen/users/davide-home.nix;
+	    home-manager.users.host = import ./hosts/hydrogen/users/host-home.nix;
 	  }	
 	];
       };
