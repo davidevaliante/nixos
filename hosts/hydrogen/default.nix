@@ -10,12 +10,20 @@
       ./hardware-configuration.nix
     ];
 
+  nix.optimise.automatic = true;
+  
   nix.settings = {
     experimental-features = [ "nix-command" "flakes" ];
     trusted-users = [ "davide" ];
     substituters = [
       "https://cache.nixos.org"
     ];
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
   };
 
   # Bootloader.
