@@ -26,6 +26,8 @@
     options = "--delete-older-than 7d";
   };
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -59,17 +61,17 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
+  # services.xserver = {
+  #  layout = "us";
+  #  xkbVariant = "";
+  #};
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -137,6 +139,8 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  programs.hyprland.enable = true;
 
   # List services that you want to enable:
 
