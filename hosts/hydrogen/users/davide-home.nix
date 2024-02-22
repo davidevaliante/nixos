@@ -1,3 +1,6 @@
+  let
+    hypr-bindings = import ./bindings.nix;
+  in
 { config, pkgs, ... }:
 {
   home.username = "davide";
@@ -6,15 +9,7 @@
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
-    bind = [
-      "$mod, Q, exec, kitty"
-      "$mod, P, exec, kitty"
-      "$mod, 1, workspace, 1"
-      "$mod, 2, workspace, 2"
-      "$mod, 3, workspace, 3"
-      "$mod, 4, workspace, 4"
-      "$mod, C, killactive"
-    ];
+    bind = hypr-bindings.bind;
   };
 
   home.packages = with pkgs; [
