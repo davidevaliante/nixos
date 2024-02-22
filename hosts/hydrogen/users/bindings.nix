@@ -6,5 +6,5 @@
     "$mod, 3, workspace, 3"
     "$mod, 4, workspace, 4"
     "$mod, 5, workspace, 5"
-  ]
+  ];
 }
