@@ -122,6 +122,7 @@
   environment.systemPackages = with pkgs; [
      git
      neovim
+     kitty
      wezterm
      firefox
      shadowsocks-libev
