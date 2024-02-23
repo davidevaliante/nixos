@@ -25,6 +25,10 @@
     userEmail = "dav.valiante@gmail.com";
   };
 
+  programs.bashrcExtra = ''
+    alias dirstruct="tree --dirfirst"
+  ''
+
   programs.vscode = {
     enable = true;
     enableUpdateCheck = true;
