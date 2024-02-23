@@ -16,6 +16,7 @@
     neofetch
     btop
     vscode
+    tree
   ];
 
   programs.git = {
