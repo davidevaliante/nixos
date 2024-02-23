@@ -1,5 +1,5 @@
   let
-    hypr-bindings = import ../../../../systems/hyprland/bindings.nix;
+    hypr-bindings = import ../../../systems/hyprland/bindings.nix;
   in
 { config, pkgs, ... }:
 {
