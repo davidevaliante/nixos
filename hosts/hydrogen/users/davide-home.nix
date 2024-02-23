@@ -17,6 +17,7 @@
     btop
     vscode
     tree
+    bash
   ];
 
   programs.git = {
@@ -25,8 +26,10 @@
     userEmail = "dav.valiante@gmail.com";
   };
 
-  programs.bashrcExtra = ''
-    alias dirstruct="tree --dirfirst"
+  programs.bash.enable = true;
+
+  programs.bash.bashrcExtra = ''
+    alias dirstruct="tree --dirsfirst"
   '';
 
   programs.vscode = {
